@@ -21,7 +21,7 @@ var jsFiles = ['js/vendor/*.js', 'js/animations/*.js', 'js/*.js'];
 var jsDest = "./"
 
 var watchSassFiles = ['scss/**/*.scss'];
-var watchJsFiles = [''];
+var watchJsFiles = jsFiles;
 var watchPhpFiles = ['**/*.php'];
 
 
@@ -88,4 +88,4 @@ gulp.task('serve', gulp.parallel(function() {
     gulp.watch("theme.js").on('change', browserSync.reload);
 }));
 
-gulp.task('default', gulp.series('sass', 'serve'));
+gulp.task('default', gulp.series('sass', 'js', 'serve'));

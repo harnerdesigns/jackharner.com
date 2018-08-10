@@ -48,7 +48,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 4, scss/style.scss */
+/* line 6, scss/style.scss */
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,17 +69,35 @@ body {
   font-size: 100%;
   font-family: "Roboto", sans-serif; }
 
-/* line 17, scss/style.scss */
+/* line 18, scss/style.scss */
 h1 {
   font-size: 8rem;
   margin-bottom: 0.25em; }
 
-/* line 21, scss/style.scss */
+/* line 22, scss/style.scss */
 h2 {
   font-size: 4rem; }
 
-/* line 25, scss/style.scss */
+/* line 26, scss/style.scss */
 b {
   font-weight: 900; }
+
+/* line 29, scss/style.scss */
+.title {
+  color: #e91e63;
+  display: inline-block;
+  position: relative;
+  text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, 1px 1px 1px #fff, 2px 0 1px #fff, 0 2px 1px #fff, 2px 2px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff, -1px -1px 1px #fff, -2px 0 1px #fff, 0 -2px 1px #fff, -2px -2px 1px #fff; }
+  /* line 35, scss/style.scss */
+  .title:after {
+    content: '';
+    width: 100%;
+    height: 0.1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    z-index: -1;
+    min-width: 3em; }
 
 /*# sourceMappingURL=style.css.map */
