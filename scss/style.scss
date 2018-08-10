@@ -1,0 +1,25 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+body{
+	display:flex;
+	align-items:center;
+	justify-content: center;
+	height:100vh;
+	padding:0;
+	margin:0;
+	flex-direction:column;
+	font-size:100%;
+	font-family:"Roboto", sans-serif;
+}
+
+h1{
+	font-size:8rem;
+	margin-bottom:0.25em;
+}
+h2{
+	font-size:4rem;
+}
+
+b{font-weight: 900}
+

@@ -1,0 +1,30 @@
+{
+  "name": "jackharner.com",
+  "version": "1.0.0",
+  "description": "Jack Harner -- Me and Everything I Do.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harnerdesigns/jackharner.com.git"
+  },
+  "author": "Jack Harner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harnerdesigns/jackharner.com/issues"
+  },
+  "homepage": "https://github.com/harnerdesigns/jackharner.com#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
+     }
+}
