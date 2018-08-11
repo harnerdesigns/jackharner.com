@@ -1,46 +1,80 @@
 @import "reset";
 @import "vars";
 
+@import "things";
+@import "slick";
+
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
-body{
-	display:flex;
-	align-items:center;
-	justify-content: center;
-	height:100vh;
-	padding:0;
-	margin:0;
-	flex-direction:column;
-	font-size:100%;
-	font-family:"Roboto", sans-serif;
+*{
+	box-sizing:border-box;
 }
 
-h1{
-	font-size:8rem;
-	margin-bottom:0.25em;
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width:100vw;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    font-size: 100%;
+    font-family: "Roboto", sans-serif;
 }
-h2{
-	font-size:4rem;
+
+h1 {
+    font-size: 8rem;
+    margin-bottom: 0.25em;
 }
 
-b{font-weight: 900}
+h2 {
+    font-size: 4rem;
+}
+
+b {
+    font-weight: 900
+}
+
+container {}
 
 
-.title{
+.full {
+    width: 100vw;
+    padding:1em;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:nth-child(3n) {
+        background: #000;
+        color: #fff;
+    }
 
-	color: $pink;
-	display:inline-block;
-	position: relative;
-	text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, 1px 1px 1px #fff, 2px 0 1px #fff, 0 2px 1px #fff, 2px 2px 1px #fff, -1px 0 1px #fff, 0 -1px 1px #fff, -1px -1px 1px #fff, -2px 0 1px #fff, 0 -2px 1px #fff, -2px -2px 1px #fff,;
-	&:after{
-		content:'';
-		width:100%;
-		height:0.1em;
-		position:absolute;
-		bottom:0;
-		left:0;
-		background:#000;
-		z-index: -1;
-		min-width:3em;
-	}
+    &:nth-child(3n+1) {
+        background:$pink;
+        color: #fff;
+    }
+}
+
+.title {
+
+    color: $pink;
+    display: inline-block;
+    position: relative;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000 ;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 0.1em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        z-index: -1;
+        min-width: 3em;
+    }
 }

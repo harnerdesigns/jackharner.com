@@ -49,12 +49,20 @@ Timer = function(callback, delay) {
     timerId = window.setTimeout(callback, remaining);
   };
   this.resume();
-};
+};  
 
 
-timer = new Timer(loop, 3000); 
+timer = new Timer(loop, 1000); 
 
 $(window).blur(function(){
 	timer.pause();
 	console.log('BLUR');
-})
+});
+
+$(".things").slick({
+        slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  rows: 0
+      });

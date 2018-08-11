@@ -1,0 +1,20 @@
+.things {
+    width: 80%;
+    display:block;
+}
+
+.thing {
+    // min-height: 25vh;
+    width: 100%;
+    margin:2em;
+    padding:1em;
+
+    img{
+    box-shadow:0 2px 5px -1px transparentize(#000, 0.4);
+    	width:100%;
+    	height:auto;
+    }
+
+    svg{height:auto;
+    	width:100%;}
+}
