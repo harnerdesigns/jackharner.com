@@ -60,8 +60,8 @@ $(window).blur(function(){
 });
 
 $(".things").slick({
-        slidesToShow: 3,
-  slidesToScroll: 1,
+        slidesToShow: 4,
+  slidesToScroll: 2,
   autoplay: true,
   autoplaySpeed: 2000,
   rows: 0

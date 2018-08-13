@@ -50,25 +50,93 @@ table {
   border-spacing: 0; }
 
 /* line 1, scss/_things.scss */
+#tagline {
+  width: 70%; }
+
+/* line 3, scss/_things.scss */
 .things {
-  width: 80%;
+  width: 90%;
   display: block; }
 
-/* line 6, scss/_things.scss */
+/* line 8, scss/_things.scss */
 .thing {
   width: 100%;
   margin: 2em;
-  padding: 1em; }
-  /* line 12, scss/_things.scss */
+  padding: 1em;
+  height: auto !important; }
+  /* line 14, scss/_things.scss */
   .thing img {
     -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
     box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
     width: 100%;
     height: auto; }
-  /* line 18, scss/_things.scss */
+  /* line 20, scss/_things.scss */
   .thing svg {
     height: auto;
+    -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
     width: 100%; }
+    /* line 24, scss/_things.scss */
+    .thing svg:hover {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
+  /* line 29, scss/_things.scss */
+  .thing.soon:after {
+    content: "Coming Soon";
+    width: 100%;
+    text-align: center;
+    line-height: 2em;
+    font-size: 0.9rem;
+    color: #aaa;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+
+/* line 1, scss/_contact.scss */
+#contact {
+  margin: 2em 0;
+  width: 50%;
+  font-size: 2rem; }
+  /* line 6, scss/_contact.scss */
+  #contact:last-child {
+    margin-bottom: 0; }
+
+/* line 12, scss/_contact.scss */
+input, textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1em;
+  margin-bottom: 1em;
+  font-family: "Roboto", sans-serif;
+  padding: 0.25em; }
+
+/* line 26, scss/_contact.scss */
+input[type=submit] {
+  background: #e91e63;
+  border-bottom: 0;
+  cursor: pointer; }
+
+/* line 1, scss/_hireMe.scss */
+#hireMeBanner {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 10vw;
+  height: auto;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+  /* line 9, scss/_hireMe.scss */
+  #hireMeBanner:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
 
 /* Slider */
 /* line 15, scss/_slick.scss */
@@ -89,7 +157,7 @@ table {
 /* line 29, scss/_slick.scss */
 .slick-list {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: block;
   margin: 0;
   padding: 0; }
@@ -312,12 +380,16 @@ table {
       color: black;
       opacity: 0.75; }
 
-/* line 10, scss/style.scss */
+/* line 12, scss/style.scss */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 14, scss/style.scss */
+/* line 16, scss/style.scss */
+html {
+  scroll-behavior: smooth; }
+
+/* line 19, scss/style.scss */
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,20 +412,20 @@ body {
   font-size: 100%;
   font-family: "Roboto", sans-serif; }
 
-/* line 28, scss/style.scss */
+/* line 33, scss/style.scss */
 h1 {
   font-size: 8rem;
   margin-bottom: 0.25em; }
 
-/* line 33, scss/style.scss */
+/* line 38, scss/style.scss */
 h2 {
   font-size: 4rem; }
 
-/* line 37, scss/style.scss */
+/* line 42, scss/style.scss */
 b {
   font-weight: 900; }
 
-/* line 44, scss/style.scss */
+/* line 49, scss/style.scss */
 .full {
   width: 100vw;
   padding: 1em;
@@ -371,22 +443,22 @@ b {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  /* line 52, scss/style.scss */
+  /* line 57, scss/style.scss */
   .full:nth-child(3n) {
     background: #000;
     color: #fff; }
-  /* line 57, scss/style.scss */
+  /* line 62, scss/style.scss */
   .full:nth-child(3n+1) {
     background: #e91e63;
     color: #fff; }
 
-/* line 63, scss/style.scss */
+/* line 68, scss/style.scss */
 .title {
   color: #e91e63;
   display: inline-block;
   position: relative;
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000; }
-  /* line 69, scss/style.scss */
+  /* line 74, scss/style.scss */
   .title:after {
     content: '';
     width: 100%;

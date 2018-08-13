@@ -2,6 +2,8 @@
 @import "vars";
 
 @import "things";
+@import "contact";
+@import "hireMe";
 @import "slick";
 
 
@@ -10,6 +12,9 @@
 *{
 	box-sizing:border-box;
 }
+
+html{
+scroll-behavior: smooth;}
 
 body {
     display: flex;
