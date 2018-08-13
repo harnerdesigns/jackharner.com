@@ -66,3 +66,25 @@ $(".things").slick({
   autoplaySpeed: 2000,
   rows: 0
       });
+
+
+
+
+$("#contact").submit(function(e) {
+
+
+    var form = $(this);
+    var url = "https://forms.hubspot.com/uploads/form/v2/4822117/8d194daf-8f67-4470-aff0-cf4865d36277"
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: form.serialize(),
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});

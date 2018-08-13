@@ -54,21 +54,24 @@ container {}
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background:#fff;
-    &:nth-child(3n+1) {
-        background: #000;
-        color: #fff;
-    }
+       
 
-    &:nth-child(3n+2) {
+       &.black{
+
+        color: #fff;
+       background: #000;
+       } 
+
+    &.pink {
         background:$pink;
         color: #fff;
     }
 
-    &:nth-child(3n+3) {
+    &.white {
         background:#fff;
         color: #000;
     }
+
 }
 
 .title {

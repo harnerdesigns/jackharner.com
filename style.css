@@ -442,28 +442,27 @@ b {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  background: #fff; }
-  /* line 58, scss/style.scss */
-  .full:nth-child(3n+1) {
-    background: #000;
-    color: #fff; }
-  /* line 63, scss/style.scss */
-  .full:nth-child(3n+2) {
+  flex-direction: column; }
+  /* line 59, scss/style.scss */
+  .full.black {
+    color: #fff;
+    background: #000; }
+  /* line 65, scss/style.scss */
+  .full.pink {
     background: #e91e63;
     color: #fff; }
-  /* line 68, scss/style.scss */
-  .full:nth-child(3n+3) {
+  /* line 70, scss/style.scss */
+  .full.white {
     background: #fff;
     color: #000; }
 
-/* line 74, scss/style.scss */
+/* line 77, scss/style.scss */
 .title {
   color: #e91e63;
   display: inline-block;
   position: relative;
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000; }
-  /* line 80, scss/style.scss */
+  /* line 83, scss/style.scss */
   .title:after {
     content: '';
     width: 100%;
