@@ -445,15 +445,15 @@ b {
   flex-direction: column;
   background: #fff; }
   /* line 58, scss/style.scss */
-  .full:nth-child(3n) {
+  .full:nth-child(3n+1) {
     background: #000;
     color: #fff; }
   /* line 63, scss/style.scss */
-  .full:nth-child(3n+1) {
+  .full:nth-child(3n+2) {
     background: #e91e63;
     color: #fff; }
   /* line 68, scss/style.scss */
-  .full:nth-child(3n+2) {
+  .full:nth-child(3n+3) {
     background: #fff;
     color: #000; }
 

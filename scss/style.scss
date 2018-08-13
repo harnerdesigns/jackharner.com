@@ -55,17 +55,17 @@ container {}
     justify-content: center;
     flex-direction: column;
     background:#fff;
-    &:nth-child(3n) {
+    &:nth-child(3n+1) {
         background: #000;
         color: #fff;
     }
 
-    &:nth-child(3n+1) {
+    &:nth-child(3n+2) {
         background:$pink;
         color: #fff;
     }
 
-    &:nth-child(3n+2) {
+    &:nth-child(3n+3) {
         background:#fff;
         color: #000;
     }
