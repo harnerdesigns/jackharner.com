@@ -28,7 +28,7 @@ var watchPhpFiles = ['**/*.php'];
 gulp.task('sass', gulp.series(function(done) {
     gulp.src(sassFiles)
         .pipe(sourcemaps.init())
-        .pipe(sass({ sourceComments: 'map' }))
+        .pipe(sass({ sourceComments: 'map', outputStyle: 'compressed' }))
         .on('error', gutil.log)
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
