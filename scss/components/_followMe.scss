@@ -1,0 +1,113 @@
+$facebook: #3b5999;
+$twitter: #55acee;
+$instagram: #e4405f;
+$dribbble: #ea4c89;
+$github: #111;
+$behance: #1769ff;
+$devto: #000;
+
+
+
+@mixin gradient($color) {
+    background: $color;
+}
+
+
+.socials{
+
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	width:80%;
+	align-items:center;
+	justify-content:center;
+
+	a{text-decoration: none;}
+	li{
+		box-shadow:0 2px 3px transparentize(#000, 0.7); 
+		width:33vmin;
+		height:33vmin;
+		margin:1vw;
+
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		flex-direction:column;
+
+		font-size:1.5em;
+		font-weight:100;
+		text-transform:uppercase;
+		letter-spacing: 0.25em;
+		transition:background 300ms; 
+
+		svg{
+		transition:all 300ms;
+			font-size:4em;
+			margin-bottom:0.25em;
+		}
+
+
+		&.facebook {
+            color: $facebook;
+
+            &:hover {
+                @include gradient($facebook);
+            }
+        }
+
+        &.twitter {
+            color: $twitter;
+
+            &:hover {
+                @include gradient($twitter);
+            }
+        }
+
+        &.instagram {
+            color: $instagram;
+
+            &:hover {
+                @include gradient($instagram);
+            }
+        }
+
+        &.dribbble {
+            color: $dribbble;
+
+            &:hover {
+                @include gradient($dribbble);
+            }
+        }
+
+        &.github {
+            color: $github;
+
+            &:hover {
+                @include gradient($github);
+            }
+        }
+
+         &.behance {
+            color: $behance;
+
+            &:hover {
+                @include gradient($behance);
+            }
+        }
+                 &.devto {
+            color: $devto;
+
+            &:hover {
+                @include gradient($devto);
+            }
+        }
+
+        		&:hover{
+
+			color:#fff;
+			svg{
+				fill:#fff;
+			}
+		}
+	}
+}

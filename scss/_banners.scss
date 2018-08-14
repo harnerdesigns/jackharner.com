@@ -1,0 +1,21 @@
+.banner{
+
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	flex-direction: row!important; 
+
+	img{max-height:100vh; width:auto;
+
+		&.product{
+			margin-bottom:-8em;
+			&:last-of-type{margin-bottom:0;}
+		}}
+
+	.half{width:50%; 
+		display:flex;
+		align-items:center; justify-content:center;
+		flex-direction:column;
+		max-height:80vh;
+	}
+}

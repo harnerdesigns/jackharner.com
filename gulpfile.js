@@ -88,4 +88,4 @@ gulp.task('serve', gulp.parallel(function() {
     gulp.watch("theme.js").on('change', browserSync.reload);
 }));
 
-gulp.task('default', gulp.series('sass', 'js', 'serve'));
+gulp.task('default', gulp.series('serve'));

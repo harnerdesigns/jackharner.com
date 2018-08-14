@@ -49,28 +49,157 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 1, scss/components/_button.scss */
+.button {
+  width: 80%;
+  padding: 0.25em 1em;
+  font-size: 2rem;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0.25em 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+  /* line 15, scss/components/_button.scss */
+  .button:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+
+/* line 25, scss/components/_button.scss */
+.full.pink .button {
+  background: #fff;
+  color: #000; }
+
+/* line 16, scss/components/_followMe.scss */
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 80%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  /* line 25, scss/components/_followMe.scss */
+  .socials a {
+    text-decoration: none; }
+  /* line 26, scss/components/_followMe.scss */
+  .socials li {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    width: 33vmin;
+    height: 33vmin;
+    margin: 1vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 1.5em;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    -webkit-transition: background 300ms;
+    transition: background 300ms; }
+    /* line 43, scss/components/_followMe.scss */
+    .socials li svg {
+      -webkit-transition: all 300ms;
+      transition: all 300ms;
+      font-size: 4em;
+      margin-bottom: 0.25em; }
+    /* line 50, scss/components/_followMe.scss */
+    .socials li.facebook {
+      color: #3b5999; }
+      /* line 53, scss/components/_followMe.scss */
+      .socials li.facebook:hover {
+        background: #3b5999; }
+    /* line 58, scss/components/_followMe.scss */
+    .socials li.twitter {
+      color: #55acee; }
+      /* line 61, scss/components/_followMe.scss */
+      .socials li.twitter:hover {
+        background: #55acee; }
+    /* line 66, scss/components/_followMe.scss */
+    .socials li.instagram {
+      color: #e4405f; }
+      /* line 69, scss/components/_followMe.scss */
+      .socials li.instagram:hover {
+        background: #e4405f; }
+    /* line 74, scss/components/_followMe.scss */
+    .socials li.dribbble {
+      color: #ea4c89; }
+      /* line 77, scss/components/_followMe.scss */
+      .socials li.dribbble:hover {
+        background: #ea4c89; }
+    /* line 82, scss/components/_followMe.scss */
+    .socials li.github {
+      color: #111; }
+      /* line 85, scss/components/_followMe.scss */
+      .socials li.github:hover {
+        background: #111; }
+    /* line 90, scss/components/_followMe.scss */
+    .socials li.behance {
+      color: #1769ff; }
+      /* line 93, scss/components/_followMe.scss */
+      .socials li.behance:hover {
+        background: #1769ff; }
+    /* line 97, scss/components/_followMe.scss */
+    .socials li.devto {
+      color: #000; }
+      /* line 100, scss/components/_followMe.scss */
+      .socials li.devto:hover {
+        background: #000; }
+    /* line 105, scss/components/_followMe.scss */
+    .socials li:hover {
+      color: #fff; }
+      /* line 108, scss/components/_followMe.scss */
+      .socials li:hover svg {
+        fill: #fff; }
+
 /* line 1, scss/_things.scss */
 #tagline {
   width: 70%; }
 
-/* line 3, scss/_things.scss */
+/* line 5, scss/_things.scss */
 .things {
   width: 90%;
   display: block; }
 
-/* line 8, scss/_things.scss */
+/* line 10, scss/_things.scss */
 .thing {
   width: 100%;
   margin: 2em;
   padding: 1em;
   height: auto !important; }
-  /* line 14, scss/_things.scss */
+  /* line 16, scss/_things.scss */
   .thing img {
     -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
     box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
     width: 100%;
     height: auto; }
-  /* line 20, scss/_things.scss */
+  /* line 22, scss/_things.scss */
   .thing svg {
     height: auto;
     -webkit-box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.6);
@@ -79,11 +208,11 @@ table {
     -webkit-transition: all 300ms;
     transition: all 300ms;
     width: 100%; }
-    /* line 24, scss/_things.scss */
+    /* line 28, scss/_things.scss */
     .thing svg:hover {
       -webkit-transform: scale(1.05);
       transform: scale(1.05); }
-  /* line 29, scss/_things.scss */
+  /* line 34, scss/_things.scss */
   .thing.soon:after {
     content: "Coming Soon";
     width: 100%;
@@ -94,6 +223,27 @@ table {
     display: block;
     text-transform: uppercase;
     letter-spacing: 2px; }
+
+/* line 51, scss/_things.scss */
+#favoriteFont h1, #favoriteFont h2, #favoriteFont h3 {
+  margin: 0; }
+
+/* line 53, scss/_things.scss */
+#favoriteFont h1 {
+  font-size: 12em;
+  font-weight: 900; }
+
+/* line 58, scss/_things.scss */
+#favoriteFont h2 {
+  font-size: 4em;
+  font-weight: 100;
+  letter-spacing: 0.25em;
+  text-transform: uppercase; }
+
+/* line 66, scss/_things.scss */
+#favoriteFont h3 {
+  font-size: 2em;
+  font-style: italic; }
 
 /* line 1, scss/_contact.scss */
 #contact {
@@ -137,6 +287,88 @@ input[type=submit] {
   #hireMeBanner:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05); }
+
+/* line 14, scss/_hireMe.scss */
+#followMeBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  height: auto;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+
+/* line 26, scss/_hireMe.scss */
+#followMeBanner, #hireMeBanner {
+  -webkit-animation: zoomIn 2s;
+  animation: zoomIn 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+/* line 1, scss/_banners.scss */
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important; }
+  /* line 8, scss/_banners.scss */
+  .banner img {
+    max-height: 100vh;
+    width: auto; }
+    /* line 10, scss/_banners.scss */
+    .banner img.product {
+      margin-bottom: -8em; }
+      /* line 12, scss/_banners.scss */
+      .banner img.product:last-of-type {
+        margin-bottom: 0; }
+  /* line 15, scss/_banners.scss */
+  .banner .half {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: 80vh; }
 
 /* Slider */
 /* line 15, scss/_slick.scss */
@@ -380,16 +612,16 @@ input[type=submit] {
       color: black;
       opacity: 0.75; }
 
-/* line 12, scss/style.scss */
+/* line 16, scss/style.scss */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 16, scss/style.scss */
+/* line 20, scss/style.scss */
 html {
   scroll-behavior: smooth; }
 
-/* line 19, scss/style.scss */
+/* line 23, scss/style.scss */
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,20 +644,20 @@ body {
   font-size: 100%;
   font-family: "Roboto", sans-serif; }
 
-/* line 33, scss/style.scss */
+/* line 37, scss/style.scss */
 h1 {
   font-size: 8rem;
   margin-bottom: 0.25em; }
 
-/* line 38, scss/style.scss */
+/* line 42, scss/style.scss */
 h2 {
   font-size: 4rem; }
 
-/* line 42, scss/style.scss */
+/* line 46, scss/style.scss */
 b {
   font-weight: 900; }
 
-/* line 49, scss/style.scss */
+/* line 53, scss/style.scss */
 .full {
   width: 100vw;
   padding: 1em;
@@ -443,26 +675,26 @@ b {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
-  /* line 59, scss/style.scss */
+  /* line 63, scss/style.scss */
   .full.black {
     color: #fff;
     background: #000; }
-  /* line 65, scss/style.scss */
+  /* line 69, scss/style.scss */
   .full.pink {
     background: #e91e63;
     color: #fff; }
-  /* line 70, scss/style.scss */
+  /* line 74, scss/style.scss */
   .full.white {
     background: #fff;
     color: #000; }
 
-/* line 77, scss/style.scss */
+/* line 81, scss/style.scss */
 .title {
   color: #e91e63;
   display: inline-block;
   position: relative;
   text-shadow: 1px 0 1px #000, 0 1px 1px #000, 1px 1px 1px #000, 2px 0 1px #000, 0 2px 1px #000, 2px 2px 1px #000, -1px 0 1px #000, 0 -1px 1px #000, -1px -1px 1px #000, -2px 0 1px #000, 0 -2px 1px #000, -2px -2px 1px #000; }
-  /* line 83, scss/style.scss */
+  /* line 87, scss/style.scss */
   .title:after {
     content: '';
     width: 100%;

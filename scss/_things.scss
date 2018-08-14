@@ -1,41 +1,70 @@
-#tagline{width:70%;}
+#tagline {
+    width: 70%;
+}
 
 .things {
     width: 90%;
-    display:block;
+    display: block;
 }
 
 .thing {
     // min-height: 25vh;
     width: 100%;
-    margin:2em;
-    padding:1em; 
-    height:auto!important;
-    img{
-    box-shadow:0 2px 5px -1px transparentize(#000, 0.4);
-    	width:100%;
-    	height:auto;
+    margin: 2em;
+    padding: 1em;
+    height: auto!important;
+    img {
+        box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
+        width: 100%;
+        height: auto;
     }
 
-    svg{height:auto;
-    box-shadow:0 2px 5px -1px transparentize(#000, 0.4);
-    border-radius:10px;
-    transition:all 300ms;
-    	width:100%; &:hover{
-    		transform:scale(1.05);
-    	}}
+    svg {
+        height: auto;
+        box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
+        border-radius: 10px;
+        transition: all 300ms;
+        width: 100%;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
 
-    	&.soon{
-    		&:after{
-    			content:"Coming Soon";
-    			width:100%;
-    			text-align:center;
-    			line-height:2em;
-    			font-size:0.9rem;
-    			color:#aaa;
-    			display: block;
-    			text-transform: uppercase;
-    			letter-spacing: 2px;
-    		}
-    	}
+    &.soon {
+        &:after {
+            content: "Coming Soon";
+            width: 100%;
+            text-align: center;
+            line-height: 2em;
+            font-size: 0.9rem;
+            color: #aaa;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+
+#favoriteFont {
+
+    h1,h2,h3{margin:0;}
+
+    h1 {
+        font-size: 12em;
+        font-weight: 900;
+    }
+
+    h2{
+        font-size:4em;
+        font-weight:100;
+        letter-spacing:0.25em;
+            text-transform: uppercase;
+
+    }
+
+    h3{
+        font-size:2em;
+        font-style: italic;
+    }
 }
