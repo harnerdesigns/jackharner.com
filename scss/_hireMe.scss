@@ -9,6 +9,10 @@
 	&:hover{
 		transform:scale(1.05);
 	}
+
+	@include breakpoint(mobileonly){
+		width:25vw;
+	}
 }
 
 #followMeBanner{
@@ -20,6 +24,10 @@
 	height:auto;
 	transform-origin: 0 0;
 	transition:all 300ms; 
+	
+	@include breakpoint(mobileonly){
+		width:25vw;
+	}
 }
 
 

@@ -22,7 +22,21 @@ $devto: #000;
 	align-items:center;
 	justify-content:center;
 
-	a{text-decoration: none;}
+    @include breakpoint(mobileonly) {
+        width:100%;
+        justify-content:center;
+        flex-direction:column;
+    }
+
+	a{text-decoration: none;
+
+        display:block;
+
+        @include breakpoint(mobileonly) {
+
+            width:100%;
+        }
+    }
 	li{
 		box-shadow:0 2px 3px transparentize(#000, 0.7); 
 		width:33vmin;
@@ -40,11 +54,31 @@ $devto: #000;
 		letter-spacing: 0.25em;
 		transition:background 300ms; 
 
+        @include breakpoint(mobileonly) {
+
+            flex-direction:row;
+            width:100%;
+            font-size:1em;
+            height:auto;
+            justify-content:flex-start;
+        }
+
 		svg{
 		transition:all 300ms;
 			font-size:4em;
 			margin-bottom:0.25em;
+
+
+            @include breakpoint(mobileonly) {
+                font-size:2em;
+                margin:0.5em;
+            }
 		}
+
+        &.devto svg{
+            height:1em;
+            width:auto;
+        }
 
 
 		&.facebook {
@@ -94,7 +128,7 @@ $devto: #000;
                 @include gradient($behance);
             }
         }
-                 &.devto {
+         &.devto {
             color: $devto;
 
             &:hover {
