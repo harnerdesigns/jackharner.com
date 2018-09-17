@@ -3,14 +3,17 @@
 }
 
 .things {
-    width: 90%;
+    width: 100%;
     display: block;
+
+    .slick-list{
+        overflow:visible!important;
+    }
 }
 
 .thing {
     // min-height: 25vh;
     width: 100%;
-    margin: 2em;
     padding: 1em;
     height: auto!important;
     img {
@@ -66,5 +69,12 @@
     h3{
         font-size:2em;
         font-style: italic;
+    }
+
+    @include breakpoint(mobileonly) {
+        text-align:center;
+        h1{ font-size: 5em;}
+        h2{ font-size: 1em;}
+        h3{ font-size: 1em;}
     }
 }
