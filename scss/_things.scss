@@ -1,5 +1,24 @@
-#tagline {
+.tagline{
+
+    a{
+        font-weight:bold;
+        text-decoration:none;
+        color:inherit;
+    }
+}
+
+h2.tagline {
     width: 70%;
+    margin-bottom: 0.25em;
+
+}
+
+h3.tagline{
+    font-size: 2em;
+    width: 70%;
+    text-align: left;
+    margin-bottom: 0.5em;
+
 }
 
 .things {

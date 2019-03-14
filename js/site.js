@@ -16,7 +16,7 @@
 
 
 
-var titles = ["Web Designer", "Photographer", "Graphic Designer", "Digital Marketer", "Cat Lover"];
+var titles = ["Web Designer", "Photographer", "Graphic Designer", "Cat Lover"];
 
 var i = 0;
 
@@ -96,10 +96,3 @@ $(".things").slick({
     // instead of a settings object
   ]
       });
-
-
-
-$('#contact').on('submit', function(e) {
-  $('#contact *').fadeOut(2000);
-  $('#contact').prepend("I look forward to working with you!");
-  });
