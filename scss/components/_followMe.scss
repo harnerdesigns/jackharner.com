@@ -49,7 +49,7 @@ $devto: #000;
 		flex-direction:column;
 
 		font-size:1.5em;
-		font-weight:100;
+		font-weight:400;
 		text-transform:uppercase;
 		letter-spacing: 0.25em;
 		transition:background 300ms; 
@@ -92,8 +92,15 @@ $devto: #000;
         &.twitter {
             color: $twitter;
 
+            &:before{
+                content: "My Favorite";
+                font-size: 0.6em;
+                color: #aaa;
+            }
+
             &:hover {
                 @include gradient($twitter);
+                &:before{ color:#fff;}
             }
         }
 

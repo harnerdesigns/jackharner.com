@@ -22,7 +22,7 @@ var jsDest = "./"
 
 var watchSassFiles = ['scss/**/*.scss'];
 var watchJsFiles = jsFiles;
-var watchPhpFiles = ['**/*.php'];
+var watchPhpFiles = ['**/*.php', '**/*.html'];
 
 
 gulp.task('sass', gulp.series(function(done) {
