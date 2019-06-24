@@ -5,29 +5,39 @@
             elem = this;
         setInterval(function() {
 
+          
+
             if (current < contentArray.length) {
                 elem.text(elem.text() + contentArray[current++]);
             }
-        }, 20);
+        }, 45);
     };
 
 })(jQuery);
 
 
+function isVowel(x) {
 
+  var result;
 
-var titles = ["Web Designer", "Photographer", "Graphic Designer", "Cat Lover"];
+  result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
+  return result;
+}
+
+var titles = ["Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Web Developer", "Entrepreneur"];
 
 var i = 0;
 
 function loop() {
 
     $('.title').text('').writeText(titles[i]);
+  if (isVowel(titles[i].slice(0,1))){
+    $("#a").text("an")
+  } else {
+    $("#a").text("a")
+    
+  }
     (i < titles.length - 1) ? i++ : i = 0;
-
-    console.log (i +", "+titles.length)
-
-
     setTimeout(loop, 3000); // call myself in 3 seconds time if required
 };
 

@@ -96,6 +96,9 @@ $devto: #000;
                 content: "My Favorite";
                 font-size: 0.6em;
                 color: #aaa;
+                @include breakpoint(mobileonly){
+                    display: none;
+                }
             }
 
             &:hover {

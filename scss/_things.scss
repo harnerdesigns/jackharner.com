@@ -78,16 +78,15 @@ h3.tagline{
     }
 
     h2{
+        font-family: "Permanent Marker";
         font-size:4em;
-        font-weight:100;
-        letter-spacing:0.25em;
-            text-transform: uppercase;
 
     }
 
     h3{
         font-size:2em;
         font-style: italic;
+        font-family: "Permanent Marker"
     }
 
     @include breakpoint(mobileonly) {
