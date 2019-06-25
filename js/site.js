@@ -28,46 +28,67 @@ var titles = ["Problem Solver", "Photographer", "Graphic Designer", "Cat Lover",
 
 var i = 0;
 
-function loop() {
+var timeout;
 
+function loop() {
+  // console.log(titles[i]);
+  if (document.hasFocus()) {
     $('.title').text('').writeText(titles[i]);
-  if (isVowel(titles[i].slice(0,1))){
-    $("#a").text("an")
-  } else {
-    $("#a").text("a")
-    
-  }
+    if (isVowel(titles[i].slice(0,1))){
+      $("#a").text("an")
+    } else {
+      $("#a").text("a")
+      
+    }
     (i < titles.length - 1) ? i++ : i = 0;
-    setTimeout(loop, 3000); // call myself in 3 seconds time if required
+    timeout = setTimeout(loop, 3000); // call myself in 3 seconds time if required
+  }
 };
 
-
-var Timer;
-
-Timer = function(callback, delay) {
-  var remaining, start, timerId;
-  timerId = void 0;
-  start = void 0;
-  remaining = delay;
-  this.pause = function() {
-    window.clearTimeout(timerId);
-    remaining -= new Date - start;
-  };
-  this.resume = function() {
-    start = new Date;
-    window.clearTimeout(timerId);
-    timerId = window.setTimeout(callback, remaining);
-  };
-  this.resume();
-};  
-
-
-timer = new Timer(loop, 1000); 
+loop();
 
 $(window).blur(function(){
-	timer.pause();
-	console.log('BLUR');
+  // console.table("Blur");
+
+  window.clearTimeout(timeout);
 });
+
+$(window).focus(function () {
+  // console.table("Focus");
+
+  loop();
+});
+
+
+// var Timer;
+
+// Timer = function(callback, delay) {
+//   var remaining, start, timerId;
+//   timerId = void 0;
+//   start = void 0;
+//   remaining = delay;
+//   this.pause = function() {
+//     window.clearTimeout(timerId);
+//     remaining -= new Date - start;
+//   };
+//   this.resume = function() {
+//     start = new Date;
+//     window.clearTimeout(timerId);
+//     timerId = window.setTimeout(callback, remaining);
+//   };
+// };  
+
+
+// var timer = new Timer(loop, 1000); 
+
+// $(window).blur(function(){
+// 	timer.pause();
+// 	console.log('BLUR');
+// });
+// $(window).focus(function () {
+//   timer.resume();
+//   console.log('focus');
+// });
 
 $(".things").slick({
         slidesToShow: 4,

@@ -1,14 +1,7 @@
 @import "reset";
 @import "vars";
 
-@import "components/components";
 
-@import "things";
-@import "contact";
-@import "hireMe";
-@import "banners";
-
-@import "slick";
 
 * {
   box-sizing: border-box;
@@ -95,6 +88,18 @@ b {
   }
 }
 
+.half{
+
+    @extend .full;
+
+    min-height: 50vh;
+}
+
+.slim{
+    @extend .full;
+    min-height: 20vh;
+}
+
 .title__box {
   border-bottom: 2px solid #fff;
   min-height: 1em;
@@ -123,3 +128,13 @@ line-height: 0.9em;}
   align-items: center;
   justify-content: center;
 }
+
+
+@import "components/components";
+
+@import "things";
+@import "contact";
+@import "hireMe";
+@import "banners";
+
+@import "slick";
