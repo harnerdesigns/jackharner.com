@@ -6,7 +6,7 @@
         setInterval(function() {
 
           
-
+ 
             if (current < contentArray.length) {
                 elem.text(elem.text() + contentArray[current++]);
             }
@@ -19,7 +19,7 @@
 function isVowel(x) {
 
   var result;
-
+ 
   result = x == "A" || x == "E" || x == "I" || x == "O" || x == "U";
   return result;
 }
@@ -42,10 +42,10 @@ function loop() {
     }
     (i < titles.length - 1) ? i++ : i = 0;
     timeout = setTimeout(loop, 3000); // call myself in 3 seconds time if required
-  }
-};
-
-loop();
+  }   
+};   
+ 
+// loop();
 
 $(window).blur(function(){
   // console.table("Blur");
@@ -57,7 +57,7 @@ $(window).focus(function () {
   // console.table("Focus");
 
   loop();
-});
+}); 
 
 
 // var Timer;

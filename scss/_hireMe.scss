@@ -33,18 +33,6 @@
 
 #followMeBanner, #hireMeBanner{
 
-	animation:zoomIn 2s;
-	animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-	animation-fill-mode:forwards;
-	transform:scale(0);
+	opacity: 0;
 }
 
-@keyframes zoomIn{
-
-	0%{
-		transform:scale(0);
-	}
-	100%{
-		transform:scale(1);
-	}
-}
