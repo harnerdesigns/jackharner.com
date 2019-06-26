@@ -12,14 +12,14 @@ $(function () {
 
 function bounce(){
 
-    TweenMax.to('#scrollIndicator', 0.5, { opacity: 1, delay: 0.5 });
-    TweenMax.to("#scrollIndicator", 1, { y: 10, repeat: -1, yoyo: true});
+    TweenMax.to('#scrollIndicator', 0.5, { opacity: 1, delay: 2 });
+    TweenMax.to("#scrollIndicator", 1, { y: 10, repeat: -1, yoyo: true, delay: 2.25});
 }
 
 
 function zoomIn(){
 
-    TweenMax.to("#followMeBanner", 1, {opacity: 1, scale: 1});
+    TweenMax.to("#followMeBanner", 1, {opacity: 1, scale: 1, delay: 2.5});
 }
 
 

@@ -26,6 +26,16 @@ h3.tagline {
     display: flex;
     flex-direction: column;
 
+    &:before{
+        content: "Click to Learn More";
+        text-align: center;
+        font-style: italic;
+        display: block;
+        margin: 0 auto 1em;
+        color: #999;
+        transition: all 300ms;
+    }
+
 
 
 }
@@ -49,6 +59,34 @@ h3.tagline {
     }
     .content{
         display:none;
+        width: 80%;
+        margin: 0 auto;
+        h3{
+            margin-top: 0.5em;
+        }
+        p{
+            font-size: 1.5em;
+            line-height: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .buttons{
+            display: flex;
+            grid-column-gap: 1em; 
+            .button{
+                width: 100%; 
+                padding: 0.5em;
+                background: $pink;
+                color: #fff;
+                font-weight: 900;
+                &:nth-of-type(2){
+                    background: white;
+                    color: $pink;
+                    border: 2px solid $pink;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 
@@ -81,6 +119,11 @@ h3.tagline {
 $tabHeight: 7vw;
 
 .things.is-open {
+
+    &:before{
+        opacity: 0;
+        margin: 0;
+    }
 
     .things__tabs {
         // overflow: hidden;
@@ -121,6 +164,7 @@ $tabHeight: 7vw;
 
         .content.is-open{
             display: flex;
+            flex-direction: column;
             z-index: 3;
         }
     }

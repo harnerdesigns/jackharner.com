@@ -24,7 +24,7 @@ function isVowel(x) {
   return result;
 }
 
-var titles = ["Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Web Developer", "Entrepreneur"];
+var titles = ["Web Developer", "Problem Solver", "Photographer", "Graphic Designer", "Cat Lover", "Entrepreneur"];
 
 var i = 0;
 
