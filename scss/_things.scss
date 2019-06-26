@@ -1,9 +1,9 @@
-.tagline{
+.tagline {
 
-    a{
-        font-weight:bold;
-        text-decoration:none;
-        color:inherit;
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        color: inherit;
     }
 }
 
@@ -13,7 +13,7 @@ h2.tagline {
 
 }
 
-h3.tagline{
+h3.tagline {
     font-size: 2em;
     width: 70%;
     text-align: left;
@@ -23,10 +23,32 @@ h3.tagline{
 
 .things {
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
-    .slick-list{
-        overflow:visible!important;
+
+
+}
+
+.things__tabs {
+    display: flex;
+}
+
+.things__body {
+    display: none;
+    padding: 1rem;
+    margin: 0 1rem;
+    z-index: 2;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 0 -5px  5px -2px transparentize(#000, 0.8);
+    // font-size: 1.5em;
+
+    & *{
+        z-index: 3;
+    }
+    .content{
+        display:none;
     }
 }
 
@@ -34,35 +56,72 @@ h3.tagline{
     // min-height: 25vh;
     width: 100%;
     padding: 1em;
-    height: auto!important;
-    img {
-        box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
-        width: 100%;
-        height: auto;
-    }
+    margin: 0 1em;
+    height: auto;
+    // box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
+    border-radius: 10px;
+    display: flex;
+    transition: all 300ms;
+
 
     svg {
         height: auto;
-        box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
-        border-radius: 10px;
+
         transition: all 300ms;
         width: 100%;
+
         &:hover {
             transform: scale(1.05);
         }
     }
 
-    &.soon {
-        &:after {
-            content: "Coming Soon";
-            width: 100%;
-            text-align: center;
-            line-height: 2em;
-            font-size: 0.9rem;
-            color: #aaa;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+    &.is-open {}
+}
+
+$tabHeight: 7vw;
+
+.things.is-open {
+
+    .things__tabs {
+        // overflow: hidden;
+    }
+
+    .thing {
+        height: $tabHeight;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+
+
+        filter: grayscale(1);
+
+
+        &:hover {
+            filter: grayscale(0.7);
+
+            svg {
+
+                filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.3));
+            }
+
+        }
+
+        &.is-open {
+            z-index: 3;
+            filter: none;
+
+            &:hover {
+                filter: none;
+            }
+        }
+    }
+
+    .things__body {
+        display: flex;
+        padding: 1em;
+
+        .content.is-open{
+            display: flex;
+            z-index: 3;
         }
     }
 }
@@ -70,29 +129,42 @@ h3.tagline{
 
 #favoriteFont {
 
-    h1,h2,h3{margin:0;}
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+    }
 
     h1 {
         font-size: 12em;
         font-weight: 900;
     }
 
-    h2{
+    h2 {
         font-family: "Permanent Marker";
-        font-size:4em;
+        font-size: 4em;
 
     }
 
-    h3{
-        font-size:2em;
+    h3 {
+        font-size: 2em;
         font-style: italic;
         font-family: "Permanent Marker"
     }
 
     @include breakpoint(mobileonly) {
-        text-align:center;
-        h1{ font-size: 5em;}
-        h2{ font-size: 1em;}
-        h3{ font-size: 1em;}
+        text-align: center;
+
+        h1 {
+            font-size: 5em;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        h3 {
+            font-size: 1em;
+        }
     }
 }
