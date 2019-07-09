@@ -5,6 +5,7 @@ $dribbble: #ea4c89;
 $github: #111;
 $behance: #1769ff;
 $devto: #000;
+$producthunt: #DA552F;
 
 
 
@@ -86,6 +87,14 @@ $devto: #000;
 
             &:hover {
                 @include gradient($facebook);
+            }
+        }
+
+        		&.producthunt {
+            color: $producthunt;
+
+            &:hover {
+                @include gradient($producthunt);
             }
         }
 
