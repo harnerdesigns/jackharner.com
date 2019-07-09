@@ -79,9 +79,9 @@ $producthunt: #DA552F;
         &.devto svg{
             height:1em;
             width:auto;
-        }
+        } 
 
-
+ 
 		&.facebook {
             color: $facebook;
 
@@ -101,7 +101,7 @@ $producthunt: #DA552F;
         &.twitter {
             color: $twitter;
 
-            &:before{
+            &:before{ 
                 content: "My Favorite";
                 font-size: 0.6em;
                 color: #aaa;
