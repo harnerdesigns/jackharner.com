@@ -15,7 +15,7 @@ $(function($) {
 
 });
 
-
+ 
 function isVowel(x) {
 
   var result;
