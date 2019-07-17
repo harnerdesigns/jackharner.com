@@ -7,7 +7,7 @@
 
 
 
-        &:hover{
+        &:hover {
             opacity: 0.6;
         }
     }
@@ -32,7 +32,7 @@ h3.tagline {
     display: flex;
     flex-direction: column;
 
-    &:before{
+    &:before {
         content: "Click to Learn More";
         text-align: center;
         font-style: italic;
@@ -57,35 +57,40 @@ h3.tagline {
     z-index: 2;
     background: #fff;
     border: 2px solid #ccc;
-    box-shadow: 0 -5px  5px -2px transparentize(#000, 0.8);
+    box-shadow: 0 -5px 5px -2px transparentize(#000, 0.8);
     // font-size: 1.5em;
 
-    & *{
+    & * {
         z-index: 3;
     }
-    .content{
-        display:none;
+
+    .content {
+        display: none;
         width: 80%;
         margin: 0 auto;
-        h3{
+
+        h3 {
             margin-top: 0.5em;
         }
-        p{
+
+        p {
             font-size: 1.5em;
             line-height: 1.5em;
             margin-bottom: 0.5em;
         }
 
-        .buttons{
+        .buttons {
             display: flex;
-            grid-column-gap: 1em; 
-            .button{
-                width: 100%; 
+            grid-column-gap: 1em;
+
+            .button {
+                width: 100%;
                 padding: 0.5em;
                 background: $pink;
                 color: #fff;
                 font-weight: 900;
-                &:nth-of-type(2){
+
+                &:nth-of-type(2) {
                     background: white;
                     color: $pink;
                     border: 2px solid $pink;
@@ -119,14 +124,13 @@ h3.tagline {
         }
     }
 
-    &.is-open {}
 }
 
 $tabHeight: 7vw;
 
 .things.is-open {
 
-    &:before{
+    &:before {
         opacity: 0;
         margin: 0;
     }
@@ -139,8 +143,6 @@ $tabHeight: 7vw;
         height: $tabHeight;
         align-items: center;
         border-radius: 10px 10px 0 0;
-
-
         filter: grayscale(1);
 
 
@@ -154,6 +156,9 @@ $tabHeight: 7vw;
 
         }
 
+
+
+
         &.is-open {
             z-index: 3;
             filter: none;
@@ -162,13 +167,27 @@ $tabHeight: 7vw;
                 filter: none;
             }
         }
+
+
+
+
+        a {
+            transition: 300ms;
+            &:focus {
+
+                outline: none;
+                margin-top: -10px;
+
+            
+            }
+        }
     }
 
     .things__body {
         display: flex;
         padding: 1em;
 
-        .content.is-open{
+        .content.is-open {
             display: flex;
             flex-direction: column;
             z-index: 3;
