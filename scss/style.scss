@@ -24,32 +24,32 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 
-  @include breakpoint(mobileonly) {
-    font-size: 5rem;
+  @include breakpoint(laptop) {
+    font-size: 8rem;
   }
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-family: "Permanent Marker";
 
-  @include breakpoint(mobileonly) {
-    font-size: 2rem;
+  @include breakpoint(laptop) {
+    font-size: 3rem;
   }
 }
 
 h3 {
-  font-size: 3.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
 
   font-weight: 300;
 
-  @include breakpoint(mobileonly) {
-    font-size: 2rem;
+  @include breakpoint(laptop) {
+    font-size: 3.5rem;
   }
 }
 
@@ -61,8 +61,14 @@ b {
   position: absolute;
   bottom: 1rem;
 
-  font-size: 3em;
   opacity: 0;
+  font-size: 1em;
+
+  @include breakpoint(laptop) {
+    font-size: 3em;
+
+
+  }
 }
 
 .full {
@@ -127,16 +133,27 @@ b {
 }
 
 .introduction {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
+
+  @include breakpoint(medium) {
+
+    width: 70%;
+
+  }
+
+  h1{
+
+    text-align: center;
+  }
+
   h2 {
     text-align: center;
-    font-size: 3em;
   }
 }
 

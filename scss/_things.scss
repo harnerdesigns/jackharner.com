@@ -13,15 +13,24 @@
     }
 }
 
+
+.tagline {
+
+    width: 100%;
+
+
+    @include breakpoint(medium) {
+
+        width: 70%;
+    }
+}
+
 h2.tagline {
-    width: 70%;
     margin-bottom: 0.25em;
 
 }
 
 h3.tagline {
-    font-size: 2em;
-    width: 70%;
     text-align: left;
     margin-bottom: 0.5em;
 
@@ -33,13 +42,19 @@ h3.tagline {
     flex-direction: column;
 
     &:before {
-        content: "Click to Learn More";
+        content: "Tap to Learn More";
         text-align: center;
         font-style: italic;
         display: block;
         margin: 0 auto 1em;
         color: #999;
         transition: all 300ms;
+
+        @include breakpoint(laptop) {
+
+            content: "Click to Learn More";
+
+        }
     }
 
 
@@ -47,17 +62,34 @@ h3.tagline {
 }
 
 .things__tabs {
-    display: flex;
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1em;
+
+    @include breakpoint(laptop) {
+        display: flex;
+        margin-bottom: 0;
+
+    }
+
 }
 
 .things__body {
     display: none;
-    padding: 1rem;
-    margin: 0 1rem;
     z-index: 2;
     background: #fff;
     border: 2px solid #ccc;
     box-shadow: 0 -5px 5px -2px transparentize(#000, 0.8);
+
+    @include breakpoint(laptop) {
+
+        padding: 1rem;
+        margin: 0 1rem;
+
+    }
+
     // font-size: 1.5em;
 
     & * {
@@ -66,22 +98,37 @@ h3.tagline {
 
     .content {
         display: none;
-        width: 80%;
         margin: 0 auto;
+
+        @include breakpoint(laptop) {
+
+            width: 80%;
+        }
 
         h3 {
             margin-top: 0.5em;
+            font-weight: 900;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1em;
             line-height: 1.5em;
             margin-bottom: 0.5em;
+
+            @include breakpoint(laptop) {
+
+                font-size: 1.5em;
+            }
         }
 
         .buttons {
             display: flex;
             grid-column-gap: 1em;
+            flex-direction: column;
+
+            @include breakpoint(medium) {
+                flex-direction: row;
+            }
 
             .button {
                 width: 100%;
@@ -105,12 +152,40 @@ h3.tagline {
     // min-height: 25vh;
     width: 100%;
     padding: 1em;
-    margin: 0 1em;
+    margin: 0;
     height: auto;
     // box-shadow: 0 2px 5px -1px transparentize(#000, 0.4);
     border-radius: 10px;
     display: flex;
     transition: all 300ms;
+    align-items: center;
+    justify-content: center;
+
+
+    @include breakpoint(medium) {
+
+        margin: 0 1em;
+    }
+
+    @include breakpoint(mobileonly) {
+
+        &:nth-of-type(1) {
+            border-radius: 10px 10px 0 10px;
+        }
+
+
+        &:nth-of-type(2) {
+            border-radius: 10px 10px 10px 0;
+        }
+
+        &:nth-of-type(4) {
+            border-radius: 0 10px 10px 10px;
+        }
+
+        &:nth-of-type(3) {
+            border-radius: 10px 0 10px 10px;
+        }
+    }
 
 
     svg {
@@ -135,14 +210,10 @@ $tabHeight: 7vw;
         margin: 0;
     }
 
-    .things__tabs {
-        // overflow: hidden;
-    }
-
     .thing {
-        height: $tabHeight;
-        align-items: center;
-        border-radius: 10px 10px 0 0;
+
+
+
         filter: grayscale(1);
 
 
@@ -154,6 +225,12 @@ $tabHeight: 7vw;
                 filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.3));
             }
 
+        }
+
+        @include breakpoint(laptop) {
+
+            height: $tabHeight;
+            border-radius: 10px 10px 0 0;
         }
 
 
@@ -173,12 +250,13 @@ $tabHeight: 7vw;
 
         a {
             transition: 300ms;
+
             &:focus {
 
                 outline: none;
                 margin-top: -10px;
 
-            
+
             }
         }
     }
