@@ -19,14 +19,14 @@
     width: 100%;
 
 
-    @include breakpoint(medium) {
+    @include breakpoint(laptop) {
 
         width: 70%;
     }
 }
 
-h2.tagline {
-    margin-bottom: 0.25em;
+h1.tagline {
+    margin-bottom: 1em;
 
 }
 
@@ -126,7 +126,7 @@ h3.tagline {
             grid-column-gap: 1em;
             flex-direction: column;
 
-            @include breakpoint(medium) {
+            @include breakpoint(laptop) {
                 flex-direction: row;
             }
 
@@ -162,7 +162,7 @@ h3.tagline {
     justify-content: center;
 
 
-    @include breakpoint(medium) {
+    @include breakpoint(laptop) {
 
         margin: 0 1em;
     }
