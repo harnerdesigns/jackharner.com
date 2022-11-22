@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/harnerdesigns/jackharner.com#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
